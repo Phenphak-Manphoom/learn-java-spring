@@ -1,20 +1,16 @@
 package com.example.demo.backend.api;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-
 import com.example.demo.backend.businessLogic.UserBusiness;
-import com.example.demo.backend.entity.User;
 import com.example.demo.backend.exception.BaseException;
 import com.example.demo.backend.model.LoginRequest;
 import com.example.demo.backend.model.Register;
 import com.example.demo.backend.model.RegisterResponse;
-import com.example.demo.backend.model.TestResponse;
 
 @RestController
 @RequestMapping("/user")

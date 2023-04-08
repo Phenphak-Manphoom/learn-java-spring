@@ -52,4 +52,23 @@ public class UserService {
 
         return userRepository.save(user);
     }
+
+    public User update(User user){
+        return userRepository.save(user);
+    }
+    public User updateName(String id,String name) throws BaseException{
+      Optional<User> opt = userRepository.findById(id);
+      if (opt.isEmpty()) {
+        throw UserException.notFound();
+      }
+      User user = opt.get();
+      user.setName(name);
+
+      return userRepository.save(user);
+    }
+
+    public void delete(String id){
+        userRepository.deleteById(id);;
+      
+    }
 }
