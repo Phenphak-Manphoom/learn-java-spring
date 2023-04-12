@@ -11,7 +11,7 @@ import lombok.Data;
 
 @MappedSuperclass
 @Data
-public abstract class BassEntity {
+public abstract class BaseEntity {
     @Id
     @GenericGenerator(name = "uuid2",strategy = "uuid2")
     @GeneratedValue(strategy = GenerationType.IDENTITY,generator = "uuid2")
