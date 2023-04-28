@@ -29,6 +29,10 @@ public class UserService {
         return userRepository.findByEmail(email);
     }
 
+    public Optional<User> findById(String id) {
+        return userRepository.findById(id);
+    }
+
     public User createUser(String name, String email, String password) throws BaseException {
 
         if (Objects.isNull(name)) {
