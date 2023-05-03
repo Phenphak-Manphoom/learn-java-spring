@@ -1,4 +1,15 @@
 spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: okyuki46
+    password: cbkrfciphsapqvyn
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
   jpa:
     hibernate:
       ddl-auto: update
@@ -16,3 +27,5 @@ app:
   token:
     secret: secret,
     issuer: BackendService
+  email:
+    from: okyuki46@gmail.com

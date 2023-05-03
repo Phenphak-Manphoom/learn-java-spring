@@ -44,7 +44,7 @@ public class SecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.cors().disable().csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and().authorizeHttpRequests().requestMatchers("/user/register", "/user/login")
+                .and().authorizeHttpRequests().requestMatchers("/user/register", "/user/login","/actuator/**")
                 .anonymous().anyRequest().authenticated()
                 .and().apply(new TokenFilterConfiguerer(tokenService));
         return http.build();
